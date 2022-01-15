@@ -1,0 +1,39 @@
+<h1>Value :   {{ title }}   </h1>
+
+<p>employees : </p>
+
+<p>
+  {{ year }}
+</p>
+
+{{ employees }} <!-- wrong use !! --> 
+<!--<ul>
+  <li *ngFor="let u of users" >
+
+    <strong>{{ u.fullname }}</strong><br>
+    <small>{{ u.phone }}</small>
+  </li>
+  
+</ul>
+-->
+
+
+<ul>
+  <li *ngFor="let e of employees" >
+
+    <strong  *ngIf=" e.year < 2000 "  class="old">{{ e.fullname }}</strong>
+    <strong *ngIf=" e.year > 2000 "    class="new">{{ e.fullname }}</strong>
+    
+    
+    <br>
+
+
+    <small>{{ e.email }} / {{ e.address }}</small>
+  </li>
+  
+</ul>
+
+
+
+
+
