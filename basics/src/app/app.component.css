@@ -5,3 +5,20 @@
 .new{
     color: green;
 }
+
+
+.feild{
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.ball{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+
+}

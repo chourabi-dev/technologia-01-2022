@@ -1,4 +1,4 @@
-<h1>Value :   {{ title }}   </h1>
+<!--<h1>Value :   {{ title }}   </h1>
 
 <p>employees : </p>
 
@@ -6,7 +6,8 @@
   {{ year }}
 </p>
 
-{{ employees }} <!-- wrong use !! --> 
+{{ employees }}-->
+<!-- wrong use !! --> 
 <!--<ul>
   <li *ngFor="let u of users" >
 
@@ -17,7 +18,7 @@
 </ul>
 -->
 
-
+<!--
 <ul>
   <li *ngFor="let e of employees" >
 
@@ -31,9 +32,61 @@
     <small>{{ e.email }} / {{ e.address }}</small>
   </li>
   
-</ul>
+</ul>-->
+
+<!--***********************************************************************************-->
+<!--
+
+<h1 [style.color]="titleColor">this is my photo</h1>
+
+<button   (click)="toggleImage()"   >toggle image</button> <br>
+
+
+<img *ngIf=" showImage " [src]="gallery[index]" alt="" width="250px">
+<br>
+
+
+<button (click)="previous()" > previous</button>
+<button (click)="next()" >next</button> -->
+<!--
+<p> {{ today | date:'medium' }} </p>
+
+
+<p> {{ 1598956223215 | number }} </p>
+
+<p> {{ 2580 | currency:'TND' }} </p>
+
+<p> {{ 'abc' | uppercase }} </p>
+
+<p> {{ 'ABC' | lowercase }} </p>
+
+
+{{ 'tchourabi@gmail.com' | email }}
+
+<br>
+
+
+{{ 'test@yahoo.fr' | email }}-->
+
+
+<!--
+<div class="feild"  (mousemove)="isMoving($event)"  >
+  <div class="ball" [style.top]="y"  [style.left]="x" ></div>
+</div>-->
 
 
 
+<div class="messages">
+  <ul>
+    <li *ngFor="let m of messages">
+      <p><strong>{{ m.username }}</strong> <br>  {{m.message}} <br> <small>{{ m.date | date:'medium' }}</small> </p>
+    </li>
+  </ul>
+</div>
 
-
+<p *ngIf="isTyping" >
+  <small>Typing...</small>
+</p>
+<div>
+  <input type="text" (keyup)="userTyping($event)" > <!--<button>send</button>-->
+</div>

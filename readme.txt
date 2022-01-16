@@ -9,3 +9,7 @@ ng new projectname
 
 RUN PROJECT
 ng serve
+
+CREATE NEW PIPE
+
+ng g p pipe_name
